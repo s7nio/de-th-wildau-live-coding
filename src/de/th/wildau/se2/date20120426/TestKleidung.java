@@ -25,7 +25,7 @@ public class TestKleidung {
 		 * Anderes paar Socken
 		 */
 
-		Kleidung sockeAddidas = new Socke("Addidas", "pink", 50);
+		Kleidung sockeAddidas = new Socke("Addidas", "pink", 45);
 
 		// sockeAddidas.setGroesse(40); // geht nicht
 		((Socke) sockeAddidas).setGroesse(40); // expliziter cast / down-cast
@@ -38,6 +38,15 @@ public class TestKleidung {
 		double y = 2.4;
 		y = x; // impliziter cast / up-cast
 		x = (int) y; // expliziter cast / down-cast
+
+		Hose hose = new Hose("Levis", "blau");
+
+		Waschmaschine waschmaschine = new Waschmaschine();
+		waschmaschine.hinzufuegen(sockeAddidas);
+		waschmaschine.hinzufuegen(sockeBoss);
+		waschmaschine.hinzufuegen(hose);
+		// waschmaschine.waschen();
+		// waschmaschine.herausnehmen();
 	}
 
 }

@@ -22,7 +22,7 @@ public class TestException {
 			throw new KleidungsException("DEIN FEHLER!!!");
 
 		} catch (KleidungsException ex) { // fängt alle KleidungsExceptions
-			ex.printStackTrace();// liefert den stack trace
+			ex.printStackTrace();// liefert den stack trace auf der Standardausgabe
 		} catch (IllegalStateException ex) { // fängt die IllegalStateException
 			System.err.println("Ohh: " + ex.getMessage());
 		} catch (Exception ex) { // fängt alle (anderen) Exception's

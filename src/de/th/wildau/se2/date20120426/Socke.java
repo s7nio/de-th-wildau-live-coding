@@ -1,5 +1,6 @@
 package de.th.wildau.se2.date20120426;
 
+
 /**
  * <code>Socke</code> erbt von {@link Kleidung}.
  * 
