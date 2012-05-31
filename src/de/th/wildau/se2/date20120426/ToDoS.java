@@ -8,12 +8,4 @@ public class ToDoS {
 	// Komplexe Objekte - shedow/deep copy, clone
 	// packages - Max fragen!
 	// ... algorithmen
-
-	public ToDoS() {
-
-	}
-
-	protected ToDoS(Object obj) {
-
-	}
 }
