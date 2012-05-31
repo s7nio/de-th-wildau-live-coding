@@ -1,11 +1,13 @@
 package de.th.wildau.se2.date20120426;
 
-public class Waschmaschine {
+public class Waschmaschine implements iMaschine {
 
 	private Kleidung[] inhalt = new Kleidung[10];
 
+	@Override
 	public void hinzufuegen(Kleidung kleidung) {
 
+		System.out.println("Kleidung in Waschmaschine hinzugefügt: " + kleidung.getName());
 		for (int i = 0; i < this.inhalt.length; i++) {
 			if (this.inhalt[i] == null) {
 				inhalt[i] = kleidung;
@@ -25,6 +27,7 @@ public class Waschmaschine {
 		}
 	}
 
+	@Override
 	public void herausnehmen() {
 
 		for (int i = 0; i < this.inhalt.length; i++) {
