@@ -12,7 +12,7 @@ public class Hauswirtschaftsraum {
 	public void maschineHinzufuegen(iMaschine x) {
 		try {
 			x.hinzufuegen(new Socke("Socke", "farbe", 40));
-			x.hinzufuegen(new Hose("Hose", "farbe"));
+			x.hinzufuegen(new Hose("Hose", Farbe.SCHWARZ));
 		} catch (KleidungsException e) {
 			e.printStackTrace();
 		}

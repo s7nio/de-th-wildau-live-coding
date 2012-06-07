@@ -41,6 +41,8 @@ public class TestKleidung {
 
 		Hose hose = new Hose("Levis", "blau");
 
+		System.out.println(hose.getFarbe().name());
+
 		Waschmaschine waschmaschine = new Waschmaschine();
 		waschmaschine.hinzufuegen(sockeAddidas);
 		waschmaschine.hinzufuegen(sockeBoss);

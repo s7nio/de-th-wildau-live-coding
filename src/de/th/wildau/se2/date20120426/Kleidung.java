@@ -9,10 +9,10 @@ package de.th.wildau.se2.date20120426;
 public abstract class Kleidung {
 
 	private String name;
-	private String farbe;
+	private Farbe farbe;
 	private boolean trocken;
 
-	public Kleidung(String name, String farbe, boolean trocken) {
+	public Kleidung(String name, Farbe farbe, boolean trocken) {
 		this.name = name;
 		this.farbe = farbe;
 		this.trocken = trocken;
@@ -26,7 +26,7 @@ public abstract class Kleidung {
 	 * @param farbe
 	 *            Farbe des Kleidungsstückes
 	 */
-	public Kleidung(String marke, String farbe) {
+	public Kleidung(String marke, Farbe farbe) {
 		this(marke, farbe, true);
 	}
 
@@ -45,11 +45,11 @@ public abstract class Kleidung {
 		this.name = name;
 	}
 
-	public String getFarbe() {
+	public Farbe getFarbe() {
 		return this.farbe;
 	}
 
-	public void setFarbe(String farbe) {
+	public void setFarbe(Farbe farbe) {
 		this.farbe = farbe;
 	}
 

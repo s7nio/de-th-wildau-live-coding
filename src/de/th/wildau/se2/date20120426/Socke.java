@@ -1,6 +1,5 @@
 package de.th.wildau.se2.date20120426;
 
-
 /**
  * <code>Socke</code> erbt von {@link Kleidung}.
  * 
@@ -22,7 +21,7 @@ public class Socke extends Kleidung {
 	 */
 	public Socke(String marke, String farbe, int groesse) throws KleidungsException {
 
-		super(marke, farbe);
+		super(marke, Farbe.valueOf(farbe.toUpperCase()));
 		setGroesse(groesse);
 	}
 
