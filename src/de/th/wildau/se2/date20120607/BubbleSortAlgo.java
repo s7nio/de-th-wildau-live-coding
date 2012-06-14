@@ -1,33 +1,20 @@
 package de.th.wildau.se2.date20120607;
 
 import java.util.Arrays;
-import java.util.Random;
 
-public class SortAlgo {
+public class BubbleSortAlgo {
 
 	public static void main(String[] args) {
 
-		int[] array = generateArray(5);
+		int[] array = SortAlgo.generateArray(5);
 		System.out.println("bubblesort (default) unsortiert " + Arrays.toString(array));
 		System.out.println("bubblesort (default) sortiert "
 				+ Arrays.toString(bubbleSortDefault(array, 0, array.length)));
 
-		array = generateArray(5);
+		array = SortAlgo.generateArray(5);
 		System.out.println("bubblesort (optimiert) unsortiert " + Arrays.toString(array));
 		System.out.println("bubblesort (optimiert) sortiert "
 				+ Arrays.toString(bubbleSortDefault(array, 0, array.length)));
-
-		array = generateArray(5);
-		System.out.println("quicksort unsortiert " + Arrays.toString(array));
-		System.out.println("quicksort sortiert " + Arrays.toString(quickSort(array)));
-	}
-
-	protected static int[] generateArray(int count) {
-		int[] result = new int[count];
-		for (int i = 0; i < count; i++) {
-			result[i] = new Random().nextInt(100);
-		}
-		return result;
 	}
 
 	/**
@@ -58,7 +45,7 @@ public class SortAlgo {
 	}
 
 	/**
-	 * 
+	 * FIXME Max
 	 * 
 	 * @param bubble
 	 *            unsorted array
@@ -67,36 +54,22 @@ public class SortAlgo {
 	public static int[] bubbleSortOpti(int[] bubble) {
 
 		int i = 0;
+		int j = 1;
 		int temp;
 		boolean again = true;
-		int foo = 1;
 
 		while (again) {
 			again = false;
-			for (i = 0; i < bubble.length - foo; i++) {
-				if (bubble[i] > bubble[i + 1]) {
+			for (i = 0; i < bubble.length - 1; i++) {
+				if (bubble[i] > bubble[j]) {
 					temp = bubble[i];
-					bubble[i] = bubble[i + 1];
-					bubble[i + 1] = temp;
+					bubble[i] = bubble[j];
+					bubble[j] = temp;
 					again = true;
+					j++;
 				}
 			}
 		}
 		return bubble;
-	}
-
-	public static int[] insertionSort() {
-		// TODO
-		return null;
-	}
-
-	public static int[] selectionSort() {
-		// TODO
-		return null;
-	}
-
-	public static int[] quickSort(int[] field) {
-
-		return null;
 	}
 }

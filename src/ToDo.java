@@ -1,6 +1,6 @@
 public class ToDo {
 
-	// 1. collections (list, set, map, ...)
+	// 1. collections (OK - list, set, map, ...)
 	// 2. sort algorithmen
 	// 3. design patterns
 	// 4. switch - break, continue
